@@ -1,0 +1,19 @@
+percent_fats = int(input())
+percent_protein = int(input())
+percent_sugars = int(input())
+total_k = int(input())
+percent_water = int(input())
+fats_per_gram = 9
+protein_per_gram = 4
+sugars_per_gram = 4
+total_fat = (percent_fats / 100) * total_k
+total_protein = (percent_protein / 100) * total_k
+total_sugars = (percent_sugars / 100) * total_k
+total_fat_per_day = total_fat / fats_per_gram
+total_protein_per_day = total_protein / protein_per_gram
+total_sugars_per_day = total_sugars / sugars_per_gram
+weight = total_sugars_per_day + total_fat_per_day + total_protein_per_day
+calories_per_gram = total_k / weight
+water = (percent_water / 100) * calories_per_gram
+real_gram = calories_per_gram - water
+print(f"{real_gram:.4f}")
